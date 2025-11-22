@@ -25,7 +25,7 @@ function Chatwindow() {
 
     try {
       const response = await fetch(
-        "https://gpt-backend-xyz.onrender.com/GPT/chat",
+        "https://gen-gptt-backend.onrender.com/GPT/chat",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
