@@ -8,6 +8,7 @@
   justify-content: space-between;
 }
 
+/* Buttons */
 button {
   display: flex;
   justify-content: space-between;
@@ -36,11 +37,13 @@ button:hover {
   background-color: rgba(255, 255, 255, 0.05);
 }
 
+/* History List */
 .history {
   margin: 10px;
   padding: 10px;
   height: 100%;
 }
+
 .history li {
   list-style-type: none;
   cursor: pointer;
@@ -63,6 +66,7 @@ button:hover {
   border-top: solid 0.25px rgba(255, 255, 255, 0.5);
 }
 
+/* Trash icon */
 .fa-trash {
   opacity: 0;
   position: absolute;
@@ -79,6 +83,75 @@ button:hover {
 }
 
 .highlighted {
-  background-color: rgba(180, 180, 180, 0, 05);
+  background-color: rgba(180, 180, 180, 0.05);
   border-radius: 10px;
+}
+
+/* --------------------------------------------------------- */
+/*                        RESPONSIVE                         */
+/* --------------------------------------------------------- */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 260px;
+  }
+
+  button span {
+    font-size: 18px;
+  }
+
+  .history li {
+    font-size: 13px;
+  }
+}
+
+/* Mobile - Collapsible Sidebar */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  /* add a class "openSidebar" from JS to show sidebar */
+  .sidebar.openSidebar {
+    transform: translateX(0);
+  }
+
+  /* Sidebar becomes scrollable */
+  .history {
+    height: auto;
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+
+  button {
+    margin: 8px;
+    padding: 8px;
+  }
+}
+
+/* Extra Small Phones */
+@media (max-width: 480px) {
+  .sidebar {
+    width: 100%;
+  }
+
+  button span {
+    font-size: 16px;
+  }
+
+  .history li {
+    font-size: 12px;
+  }
+
+  .sign {
+    font-size: 12px;
+  }
 }

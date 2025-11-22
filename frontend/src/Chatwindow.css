@@ -10,7 +10,6 @@
 }
 
 /* navbar */
-
 .navbar {
   width: 100%;
   display: flex;
@@ -93,6 +92,7 @@ input:focus {
   color: #b4b4b4;
 }
 
+/* DropDown */
 .dropDown {
   position: absolute;
   top: 4rem;
@@ -114,4 +114,78 @@ input:focus {
 .dropDownItem:hover {
   background-color: rgba(180, 180, 180, 0.1);
   border-radius: 6px;
+}
+
+/* --------------------------------------------- */
+/*              RESPONSIVE DESIGN                */
+/* --------------------------------------------- */
+
+/* Medium Devices - Tablets */
+@media (max-width: 1024px) {
+  .navbar span,
+  .usericonDiv {
+    margin: 1rem;
+  }
+
+  .dropDown {
+    top: 3.5rem;
+    right: 2rem;
+  }
+}
+
+/* Small Devices - Mobiles */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+
+  .navbar span,
+  .usericonDiv {
+    margin: 0.5rem 0.5rem;
+  }
+
+  .userIcon {
+    height: 22px;
+    width: 22px;
+    font-size: 0.7rem;
+  }
+
+  .inputBox {
+    max-width: 90%;
+  }
+
+  input {
+    padding: 15px;
+    font-size: 0.75rem;
+  }
+
+  #submit {
+    height: 30px;
+    width: 30px;
+    right: 10px;
+    font-size: 18px;
+  }
+
+  .dropDown {
+    right: 1rem;
+    top: 3.2rem;
+    width: 130px;
+  }
+}
+
+/* Extra Small Phones */
+@media (max-width: 480px) {
+  .navbar span {
+    font-size: 0.85rem;
+  }
+
+  input {
+    padding: 13px;
+  }
+
+  .dropDown {
+    width: 120px;
+    top: 3rem;
+    right: 0.7rem;
+  }
 }

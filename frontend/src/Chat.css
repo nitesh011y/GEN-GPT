@@ -3,19 +3,23 @@
   overflow-y: auto;
   scrollbar-width: none;
   padding: 8rem;
+  margin: auto;
 }
 
+/* User Message Container */
 .userDiv {
   display: flex;
   justify-content: flex-end;
   font-size: 0.9rem;
 }
 
+/* GPT Message Container */
 .gptDiv {
   text-align: left;
   font-size: 0.9rem;
 }
 
+/* User Chat Bubble */
 .userMessage {
   background-color: #323232;
   padding: 10px 20px;
@@ -25,10 +29,56 @@
   width: fit-content;
 }
 
+/* Code Block Styling */
 .hljs {
   border-radius: 14px !important;
 }
 
 pre {
   white-space: pre-wrap;
+}
+
+/* ---------------------------------------- */
+/*            RESPONSIVE DESIGN             */
+/* ---------------------------------------- */
+
+/* Tablet Screens */
+@media (max-width: 1024px) {
+  .chats {
+    padding: 5rem;
+  }
+
+  .userMessage {
+    margin-left: 8rem;
+    max-width: 70%;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 768px) {
+  .chats {
+    padding: 2rem;
+  }
+
+  .userMessage {
+    margin-left: 0; /* No large spacing on mobile */
+    max-width: 85%; /* Bubble adjusts to mobile width */
+  }
+
+  .userDiv,
+  .gptDiv {
+    font-size: 0.85rem; /* Slightly smaller for mobile */
+  }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+  .chats {
+    padding: 1rem;
+  }
+
+  .userMessage {
+    padding: 8px 15px;
+    max-width: 90%;
+  }
 }
